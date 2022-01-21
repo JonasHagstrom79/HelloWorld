@@ -16,3 +16,5 @@ decryptString = crypter.decrypt(pw)             #This decrypts the string
 #print(key)
 print(str(pw, "utf-8"))                         #Removes the b' .... ' from the lines
 print(str(decryptString, "utf-8"))
+
+#testing
