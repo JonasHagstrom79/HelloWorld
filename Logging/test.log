@@ -1,0 +1,16 @@
+2022-09-29 13:47:47,302:__main__:ERROR:Tried to divide by zero
+2022-09-29 13:52:52,884:__main__:ERROR:Tried to divide by zero
+Traceback (most recent call last):
+  File "C:/Users/Rocks/PycharmProjects/HelloWorld/Logging/log-sample.py", line 54, in divide
+    result = x / y
+ZeroDivisionError: division by zero
+2022-09-29 13:55:26,846:__main__:ERROR:Tried to divide by zero
+Traceback (most recent call last):
+  File "C:/Users/Rocks/PycharmProjects/HelloWorld/Logging/log-sample.py", line 59, in divide
+    result = x / y
+ZeroDivisionError: division by zero
+2022-09-29 13:57:20,380:__main__:ERROR:Tried to divide by zero
+Traceback (most recent call last):
+  File "C:/Users/Rocks/PycharmProjects/HelloWorld/Logging/log-sample.py", line 61, in divide
+    result = x / y
+ZeroDivisionError: division by zero
