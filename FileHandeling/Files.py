@@ -59,3 +59,31 @@ with open("test.txt", "r") as f:
 with open("test2.txt", "w") as f:
     f.write("Test") #Will create the file if its not created, WILL OVERWRITE EXISTING FILE IF ALREADY EXISTING
     #pass # = dont do anything
+    f.seek(0) # Overwrites the first Test with the 2nd. Doesnt delete the whole content
+    f.write("Test")
+
+## Make a copy of a file
+with open("test.txt", "r") as rf: # rf = readfile
+    # Create a copy
+    with open("test_copy.txt", "w") as wf:  # wf = writefile
+        for line in rf:
+            wf.write(line)
+
+## Make a copy of a picture
+with open("cat-cupid-love-icon.png", "rb") as rf: # rf = readfile, rb = readBINARY, neede for picture
+    # Create a copy
+    with open("cat-cupid-love-icon_copy.png", "wb") as wf:  # wf = writefile, wf = writeBINARY
+        for line in rf:
+            wf.write(line)
+
+## Make a copy of a picture chunk by chunk for more control
+with open("cat-cupid-love-icon.png", "rb") as rf: # rf = readfile, rb = readBINARY, neede for picture
+    # Create a copy
+    with open("cat-cupid-love-icon_copy.png", "wb") as wf:  # wf = writefile, wf = writeBINARY
+        chunk_size = 4096
+        rf_chunk = rf.read(chunk_size)
+        while len(rf_chunk) > 0:
+            wf.write(rf_chunk)
+            # Read in next chunc_size for not getting an infinite loop
+            rf_chunk = rf.read(chunk_size)
+
